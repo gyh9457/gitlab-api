@@ -17,6 +17,7 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
+    "@gitbeaker/node": "^28.0.1",
     "@nestjs/common": "^7.0.0",
     "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^7.0.0",
@@ -24,8 +25,8 @@
     "@nestjs/serve-static": "^2.1.1",
     "@nestjs/swagger": "^4.6.1",
     "axios": "^0.19.2",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.12.2",
-    "class-transformer":"^0.3.1",
     "cookie-parser": "^1.4.5",
     "crypto-js": "^4.0.0",
     "express-favicon": "^2.0.1",

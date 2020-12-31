@@ -1,6 +1,6 @@
 import { createLogger, format } from 'winston'
 import { Logger } from '@nestjs/common'
-import * as DailyRotateFile from 'winston-daily-rotate-file'
+import DailyRotateFile from 'winston-daily-rotate-file'
 import {LOGGER} from '../config'
 
 const { combine, timestamp, printf } = format
