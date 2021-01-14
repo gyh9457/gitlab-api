@@ -1,6 +1,6 @@
 export const token = 'hmXzxD75SjtyfZsmKaox'
 export const root_token = 'yUzfbk3mYxZRADhohTfp'
-export const impresonation_token = 'YFCAmpbfEv5exXBnWC2'
+export const impresonation_token = '-YFCAmpbfEv5exXBnWC2'
 
 /**
  * {
