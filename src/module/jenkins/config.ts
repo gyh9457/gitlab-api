@@ -1,1 +1,3 @@
 export const token = '11dcc46ec632a7ef5e4c98c5f116bacc41'
+export const web_crumb = 'dbb7c3787c81cbeb04ae86b8cd4b884ab82c4f73a015a33d8bbe266da481c944'
+export const postman_crumb = 'fe695b03a370ab77c5b3cbac860a0d26c87c1b099a3dc15106b1c298dd11d307'

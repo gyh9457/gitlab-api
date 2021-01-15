@@ -88,9 +88,9 @@ export class GitlabService {
     }
   }
 
-  async getContentParams(params) {
+  async getContent(params) {
     try {
-      const content = await request.get(`http://192.168.85.90:9527/api/v4/projects/${params.id}/files/${params.filePath}`, {
+      const file = await request.get(`http://192.168.85.90:9527/api/v4/projects/${params.id}/repository/files/${params.filePath}`, {
         headers: {
           'PRIVATE-TOKEN': impresonation_token
         },
@@ -98,7 +98,24 @@ export class GitlabService {
           ref: params.ref
         }
       })
-      return content
+      const { content } = file
+      return {
+        version: JSON.parse(Buffer.from(content, 'base64').toString()).version
+      }
+    } catch (error) {
+      console.log(error.data)
+    }
+  }
+
+  async createHooks(data) {
+    try {
+      const hook = await request.post(`http://192.168.85.90:9527/api/v4/projects/${data.id}/hooks`, {
+        headers: {
+          'PRIVATE-TOKEN': impresonation_token
+        },
+        data
+      })
+      return hook
     } catch (error) {
       console.log(error.data)
     }

@@ -62,12 +62,17 @@ export class  GitlabController {
   @Get('/content')
   async content(@Query() query) {
     const { id, filePath, ref } = query
-    console.log(filePath)
-    const result = await this.gitlabService.compare({
+    const result = await this.gitlabService.getContent({
       id,
       filePath,
       ref
     })
+    return result
+  }
+
+  @Post('/hooks')
+  async createHooks(@Body() data) {
+    const result = await this.gitlabService.createHooks(data)
     return result
   }
 }
